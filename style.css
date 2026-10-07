@@ -878,3 +878,22 @@ li span:hover:after {
     background: #555;
 
 }
+
+/* ── himmetaga: simetrik yerleşim (masaüstü) ─────────────────────────────────────────────
+   Menü ve alt bilgi zaten ekranın %80'inde ortalı; içerik de aynı %10'luk kenar payına oturur,
+   ana sayfa içeriği dikeyde ortalanır, alt bağlantılar ortaya alınır. */
+html, body { overflow-x: hidden; }
+.row { margin-left: 0; margin-right: 0; }
+@media only screen and (min-width: 769px) {
+    #index-body > div > .row,
+    .contact-row, #work-row,
+    body > div > .row { width: 80vw !important; margin-left: auto !important; margin-right: auto !important; padding-left: 0 !important; padding-right: 0 !important; }
+    #left-hero { padding-left: 0; padding-right: 3vw; }
+    #hero-right { padding-right: 0; display: flex; align-items: center; justify-content: center; }
+    #hero-img { margin-top: 0; width: 100%; max-width: 560px; }
+    #index-body > div > .row { min-height: calc(100vh - 10vh - 20px - 60px); align-items: center; }
+    #index-body .hero-tag { margin-top: 0; }
+    .social-icons { margin-top: 36px; }
+    .footer-full { padding-left: 0; padding-right: 0; }
+    .legal { left: 0; right: 0; text-align: center; }
+}
