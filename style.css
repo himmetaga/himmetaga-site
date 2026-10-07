@@ -897,3 +897,21 @@ html, body { overflow-x: hidden; }
     .footer-full { padding-left: 0; padding-right: 0; }
     .legal { left: 0; right: 0; text-align: center; }
 }
+
+/* ── himmetaga: alt bilgi her sayfada aynı yerde (sosyal butonlar sol, telif sağ) ── */
+.site-foot .social-icons { margin: 0; display: flex; gap: 18px; }
+.site-foot .footer-credits { float: none; }
+@media only screen and (min-width: 769px) {
+    body { padding-bottom: 96px; }
+    .site-foot { position: fixed !important; left: 0; right: 0; bottom: 0; width: 80vw; margin: 0 auto; padding: 0 0 28px !important;
+                 display: flex; justify-content: space-between; align-items: center; background: transparent; z-index: 5; }
+    /* Work: görsel başlıkla sola, metin sağ kenara hizalı */
+    #work-row > div { padding-left: 0; padding-right: 0; }
+    #work-row center { text-align: left; }
+    #work-row .work-hero { margin: 0; }
+    #work-row .work-hero-img { width: 100%; margin: 0; }
+    #work-row .work-des { padding-left: 6vw; padding-right: 0; }
+}
+@media only screen and (max-width: 768px) {
+    .site-foot { display: flex; justify-content: space-between; align-items: center; width: auto; padding: 28px 20px !important; }
+}
