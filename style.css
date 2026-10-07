@@ -964,3 +964,16 @@ html, body { overflow-x: hidden; }
 @media only screen and (max-width: 768px) {
     #index-body .hero-tag { font-size: clamp(28px, 9.5vw, 48px) !important; }
 }
+/* mobil alt bilgi: butonlar solda, telif sağda, aynı satır, iki yanda eşit pay; Safari alt çubuğu için güvenli alan */
+@media only screen and (max-width: 768px) {
+    .site-foot { flex-direction: row !important; justify-content: space-between !important; align-items: center; text-align: left;
+                 padding: 28px 24px calc(28px + env(safe-area-inset-bottom)) !important; }
+    .site-foot .social-icons { justify-content: flex-start; gap: 18px; }
+    .site-foot .social-icons i { font-size: 22px; }
+    .site-foot .footer-credits { font-size: 13px; text-align: right; }
+}
+@media only screen and (max-width: 768px) {
+    .site-foot { width: 100% !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; box-sizing: border-box; align-self: stretch; }
+    .site-foot .social-icons, .site-foot .social-icons a, .site-foot .footer-credits { margin: 0 !important; padding: 0 !important; line-height: 1; display: flex; align-items: center; }
+}
+@media only screen and (max-width: 768px) { .site-foot .footer-credits { gap: 5px; white-space: pre; } }
