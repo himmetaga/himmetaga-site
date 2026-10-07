@@ -927,3 +927,26 @@ html, body { overflow-x: hidden; }
 @media only screen and (min-width: 769px) {
     .site-foot { background: #fff; padding-top: 22px !important; box-shadow: 0 -18px 24px -18px rgba(255,255,255,1); }
 }
+
+/* ── himmetaga: mobil düzen ── logo görünür ve hamburgerle aynı satırda, başlık taşmaz,
+   metin sola yaslı (iki yana yaslı boşluklar yok), üst boşluk kısa, kenar payları iki yanda eşit */
+@media only screen and (max-width: 768px) {
+    .nav-desk { display: block !important; width: auto !important; height: 72px !important; padding: 0 24px !important; }
+    .nav-desk > center { justify-content: flex-start; }
+    .nav-items { display: none !important; }
+    #logo { display: block !important; height: 24px; margin-top: 0 !important; }
+    #left-hero, #hero-right, .work-des, #work-row, #work-row > div { padding-left: 24px !important; padding-right: 24px !important; }
+    .row, #index-body > div > .row { width: 100% !important; margin: 0 !important; }
+    .hero-tag, #index-body .hero-tag { margin-top: 6vh !important; font-size: clamp(36px, 11vw, 52px) !important; line-height: 1.1; overflow-wrap: break-word; }
+    .hero-des, .legal-des, .work-des p { text-align: left !important; word-spacing: normal; letter-spacing: .2px; }
+    #hero-img { width: 100%; margin-top: 24px; }
+    .site-foot { padding: 24px 24px 32px !important; }
+}
+@media only screen and (max-width: 768px) {
+    .menu-wrap { top: 6px !important; right: 10px !important; }
+    #work-row .work-des h1, #work-row .work-des h2 { text-align: left !important; }
+    #work-row center { text-align: left; }
+    #work-row .work-hero-img { width: 100% !important; margin: 0 !important; }
+}
+@media only screen and (max-width: 768px) { #work-row { padding-left: 0 !important; padding-right: 0 !important; } }
+@media only screen and (max-width: 768px) { #work-row .work-des { padding-left: 0 !important; padding-right: 0 !important; } }
