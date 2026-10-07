@@ -957,3 +957,10 @@ html, body { overflow-x: hidden; }
     .site-foot .social-icons { justify-content: center; gap: 28px; }
     .site-foot .footer-credits { white-space: nowrap; font-size: 14px; }
 }
+/* daktilo animasyonu yazıp silerken başlık yüksekliği değişmesin (alttaki metin zıplamasın):
+   başlık tek satırda kalır, yüksekliği bir satıra sabit */
+.hero-tag .typer { white-space: nowrap; }
+#index-body .hero-tag { white-space: nowrap; min-height: 1.15em; line-height: 1.15; }
+@media only screen and (max-width: 768px) {
+    #index-body .hero-tag { font-size: clamp(28px, 9.5vw, 48px) !important; }
+}
